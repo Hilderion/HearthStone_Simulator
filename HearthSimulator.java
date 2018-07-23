@@ -5,50 +5,49 @@ public class HearthSimulator {
 	public static void main(String[] args) {
 		
 		Scanner inputScan = new Scanner(System.in);
-
 		Random randomGen = new Random();
 
-		System.out.println("돌겜 시뮬레이터 ver 0.01");
+		System.out.println("돌겜 시뮬레이터 ver 0.02");
+		// '18.07.23 Update
 
 		System.out.println("직업 선택 :");
 		System.out.println("1 : 드루이드, 2: 도적, 3: 전사, ");
 		System.out.println("4:사제, 5:사냥꾼, 6: 마법사, ");
 		System.out.println("7: 성기사, 8: 주술사, 9: 흑마법사");
 
-		//입력한 값 (1~9) String -> Int 변환
-		String inputResult = inputScan.next();
-		int classNumber = Integer.parseInt(inputResult);
+		int classNumber = inputScan.nextInt();
+		String className [] = {"드루이드","도적","전사","사제","사냥꾼","마법사","성기사","주술사","흑마법사"};
 		
 		//플레이어 직업선택
 		System.out.print("선택한 직업: ");
 		switch (classNumber) {
 			
 			case 1 :
-				System.out.println(className.드루이드);
+				System.out.println(className[0]);
 				break;
 			case 2 :
-				System.out.println(className.도적);
+				System.out.println(className[1]);
 				break;
 			case 3 :
-				System.out.println(className.전사);
+				System.out.println(className[2]);
 				break;
 			case 4 :
-				System.out.println(className.사제);
+				System.out.println(className[3]);
 				break;
 			case 5 :
-				System.out.println(className.사냥꾼);
+				System.out.println(className[4]);
 				break;
 			case 6 :
-				System.out.println(className.마법사);
+				System.out.println(className[5]);
 				break;
 			case 7 :
-				System.out.println(className.성기사);
+				System.out.println(className[6]);
 				break;
 			case 8 :
-				System.out.println(className.주술사);
+				System.out.println(className[7]);
 				break;
 			case 9 :
-				System.out.println(className.흑마법사);
+				System.out.println(className[8]);
 				break;	
 			}
 
@@ -57,31 +56,31 @@ public class HearthSimulator {
 		int classNumber2 = (randomGen.nextInt(9))+1;
 		switch (classNumber2) {
 			case 1 :
-				System.out.println(className.드루이드);
+				System.out.println(className[0]);
 				break;
 			case 2 :
-				System.out.println(className.도적);
+				System.out.println(className[1]);
 				break;
 			case 3 :
-				System.out.println(className.전사);
+				System.out.println(className[2]);
 				break;
 			case 4 :
-				System.out.println(className.사제);
+				System.out.println(className[3]);
 				break;
 			case 5 :
-				System.out.println(className.사냥꾼);
+				System.out.println(className[4]);
 				break;
 			case 6 :
-				System.out.println(className.마법사);
+				System.out.println(className[5]);
 				break;
 			case 7 :
-				System.out.println(className.성기사);
+				System.out.println(className[6]);
 				break;
 			case 8 :
-				System.out.println(className.주술사);
+				System.out.println(className[7]);
 				break;
 			case 9 :
-				System.out.println(className.흑마법사);
+				System.out.println(className[8]);
 				break;	
 			}
 
@@ -103,8 +102,7 @@ public class HearthSimulator {
 			System.out.println("-----1턴 진행-----");
 			System.out.println("어떤 행동을 취하겠습니까?");
 			System.out.println("1 : 턴종료, 2 : 필드 깔기, 3: 감정표현");
-			String turnResult = inputScan.next();
-			int turnPoint = Integer.parseInt(turnResult);
+			int turnPoint = inputScan.nextInt();
 
 			// 플레이어 1턴 진행
 			switch (turnPoint) {
@@ -257,8 +255,3 @@ public class HearthSimulator {
 
 	}
 }
-
-// 직업 enum 열거
-enum className {
-			드루이드,도적,전사,사제,사냥꾼,마법사,성기사,주술사,흑마법사 
-		}
