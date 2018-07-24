@@ -1,0 +1,24 @@
+import java.util.Scanner;
+import java.util.Random;
+
+public class TurnWorker {
+	
+	void game () {
+
+		PlayerInfo player = new PlayerInfo();
+		player.playerNum = 1;
+		player.turnCount = 0;
+		
+		System.out.println("------------------------------------------");
+		System.out.println("hs_simulator_ver_0.03");
+		System.out.println("------------------------------------------");
+
+		SelectClass selectClass = new SelectClass();
+		int classNo = selectClass.classSelect();
+
+
+		
+
+
+	}
+}
